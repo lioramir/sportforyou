@@ -1,0 +1,16 @@
+.Landing_page {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  height: 100%;
+
+  overflow: auto;
+}
+
+.Landing_page .logo1 {
+  width: 17%;
+  height: 22%;
+}
+
+.Landing_page p {
+  text-align: center;
+}

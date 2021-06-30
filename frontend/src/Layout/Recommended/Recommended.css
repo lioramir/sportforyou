@@ -1,0 +1,42 @@
+.Recommended {
+  float: left;
+  width: 100%;
+  height: 100%;
+  background: #606c88; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3f4c6b,
+    #606c88
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3f4c6b,
+    #606c88
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 5px;
+}
+.Recommended ul {
+  padding: 0;
+  list-style-type: none;
+}
+.Recommended ul li {
+  margin-bottom: 5px;
+  color: cornsilk;
+}
+.Recommended img {
+  width: 60%;
+}
+.two {
+  animation: two 4s infinite;
+}
+
+@keyframes two {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}

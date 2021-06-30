@@ -1,0 +1,29 @@
+.Products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 220px;
+  height: 100%;
+
+  overflow: auto;
+}
+
+.Products ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.text-link {
+  color: black;
+  text-decoration: none;
+}
+@media (max-width: 940px) {
+  .Products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 650px) {
+  .Products {
+    grid-template-columns: 1fr;
+  }
+}

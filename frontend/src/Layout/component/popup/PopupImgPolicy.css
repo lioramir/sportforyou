@@ -1,0 +1,14 @@
+.dialogpop {
+    box-shadow: 0 8px 6px -6px black;
+    position: static;
+    left: 0%;
+    top: 25%;
+    z-index: 1;
+ 
+  }
+  
+  .imagepop {
+    cursor: pointer;
+    width: 400px;
+    height: 400px;
+  }

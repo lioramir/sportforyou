@@ -1,0 +1,23 @@
+.Admin {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+.Admin ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.Admin ul li {
+  margin-bottom: 20px;
+}
+.Admin button {
+  min-inline-size: 200px;
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
