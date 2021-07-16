@@ -30,7 +30,7 @@ function ProductSelection(props) {
   const handleDel = async () => {
     const url = props.match.params.id;
     const response = await fetch(
-      `http://localhost:5000/ProductSelection/${url}`,
+      `${process.env.REACT_APP_BACKEND_URL}ProductSelection/${url}`,
       { method: "DELETE" }
     );
     console.log(response);
@@ -72,7 +72,10 @@ function ProductSelection(props) {
             </li>
             <li>
               <img
-                src={props.location.state.prod.picture}
+                src={
+                  process.env.REACT_APP_BACKEND_URL +
+                  `${props.location.state.prod.picture}`
+                }
                 alt="logo"
                 style={{ width: "180px", height: "175px" }}
               />
@@ -151,7 +154,10 @@ function ProductSelection(props) {
             <li>
               <img
                 onClick={handleShowDialog}
-                src={props.location.state.prod.picture2}
+                src={
+                  process.env.REACT_APP_BACKEND_URL +
+                  `${props.location.state.prod.picture2}`
+                }
                 alt="logo"
                 style={{ width: "150px", height: "150px" }}
               />

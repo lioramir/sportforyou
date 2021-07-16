@@ -1,0 +1,10 @@
+{
+    "env": {
+        "DB_USER": "lior1",
+        "DB_PASSWORD": "049989657",
+        "DB_NAME": "sportforyou",
+        "JWT_KEY": "dont_share"
+
+
+    }
+}

@@ -26,8 +26,14 @@
   grid-row: 2/9;
   height: 83vh;
 }
+input {
+  direction: RTL;
+}
 
 @media (max-width: 700px) {
+  .Layout {
+    grid-gap: 0.5em;
+  }
   .Layout .Nav_s {
     grid-column: 1/6;
     grid-row: 1/1;

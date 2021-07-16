@@ -5,7 +5,7 @@ import { useState } from "react";
 const MobileNavigation = (props) => {
   const [open, setOpen] = useState(false);
   return (
-    <navi className="MobileNavigation">
+    <div className="MobileNavigation">
       <VscMenu
         className="Hamburger"
         size="40px"
@@ -13,7 +13,7 @@ const MobileNavigation = (props) => {
         onClick={() => setOpen(!open)}
       />
       {open && <NavLinksRight token={props.token} />}
-    </navi>
+    </div>
   );
 };
 export default MobileNavigation;

@@ -38,21 +38,26 @@ const LoginAdmin = (props) => {
   }
   const handleSubmit = async (event) => {
     try {
-      const response = await fetch("http://localhost:5000/LoginAdmin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          UserName: UserAdmin.UserName.value,
-          UserPassword: UserAdmin.UserPassword.value,
-        }),
-      });
+      event.preventDefault();
+      const response = await fetch(
+        process.env.REACT_APP_BACKEND_URL + `LoginAdmin`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            UserName: UserAdmin.UserName.value,
+            UserPassword: UserAdmin.UserPassword.value,
+          }),
+        }
+      );
+
       const responseData = await response.json();
-      console.log(responseData.token);
       const tokenExpirationDate = new Date(
         new Date().getTime() + 1000 * 60 * 60
       );
+
       localStorage.setItem(
         "adminToken",
         JSON.stringify({
@@ -60,8 +65,12 @@ const LoginAdmin = (props) => {
           expiration: tokenExpirationDate.toString(),
         })
       );
+
+      alert("התחברת בהצלחה");
+      window.location.reload();
     } catch (err) {
       console.log(err);
+      alert("נסה שנית");
     }
   };
 

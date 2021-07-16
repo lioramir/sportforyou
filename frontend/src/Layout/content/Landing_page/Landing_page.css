@@ -14,3 +14,24 @@
 .Landing_page p {
   text-align: center;
 }
+
+.Landing_page .img_d {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  .Landing_page .img_d {
+    display: none;
+  }
+  .Landing_page .logo1 {
+    width: 40%;
+    height: 20%;
+  }
+  .Landing_page h2 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .Landing_page p {
+    font-size: 12px;
+  }
+}

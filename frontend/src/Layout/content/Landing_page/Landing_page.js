@@ -24,11 +24,7 @@ function Landing_page(props) {
           כשאתה חושב כדורגל, תחשוב ספורט פור יו -אנחנו איתך
         </p>
 
-        <img
-          src={top_nav}
-          alt="img"
-          style={{ width: "100%", height: "100%" }}
-        />
+        <img src={top_nav} alt="img" className="img_d" />
       </div>
     </react.Fragment>
   );

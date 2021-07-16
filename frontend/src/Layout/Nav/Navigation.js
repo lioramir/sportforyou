@@ -2,9 +2,9 @@ import NavLinksRight from "./NavLinksRight";
 import "./Nav.css";
 const Navigation = (props) => {
   return (
-    <navi className="Navigation">
+    <div className="Navigation">
       <NavLinksRight token={props.token} />
-    </navi>
+    </div>
   );
 };
 export default Navigation;

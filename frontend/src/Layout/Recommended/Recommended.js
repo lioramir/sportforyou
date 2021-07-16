@@ -14,8 +14,7 @@ function Recommended(props) {
   useEffect(() => {
     try {
       const sendRequest = async () => {
-        const response = await fetch("http://localhost:5000/");
-
+        const response = await fetch(process.env.REACT_APP_BACKEND_URL);
         const responseData = await response.json();
         setRecommendedImg(responseData.RecommendedImg);
         setRecommendedLoading(true);
@@ -55,7 +54,10 @@ function Recommended(props) {
                 <li>מומלצים</li>
                 <li>
                   <img
-                    src={RecommendedImg[currentImage]}
+                    src={
+                      process.env.REACT_APP_BACKEND_URL +
+                      `${RecommendedImg[currentImage]}`
+                    }
                     className={"two"}
                     alt="img"
                   />
@@ -67,7 +69,10 @@ function Recommended(props) {
                 <li>ליגיונרים</li>
                 <li>
                   <img
-                    src={Legionnaires[currentLegionnairesImage]}
+                    src={
+                      process.env.REACT_APP_BACKEND_URL +
+                      `${Legionnaires[currentLegionnairesImage]}`
+                    }
                     className={"two"}
                     alt="img"
                   />

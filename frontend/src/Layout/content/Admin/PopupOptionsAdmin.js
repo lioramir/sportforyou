@@ -115,6 +115,7 @@ const PopupOptionsAdmin = (props) => {
     });
   }
   const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
       const formData = new FormData();
       formData.append("name", state.name.value);
@@ -127,14 +128,18 @@ const PopupOptionsAdmin = (props) => {
       formData.append("image", state.img.value);
       formData.append("image1", state.picture2.value);
 
-      const response = await fetch("http://localhost:5000/Admin", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        process.env.REACT_APP_BACKEND_URL + `Admin`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const responseData = await response.json();
       console.log(responseData);
       alert("המוצר נוסף בהצלחה");
+      window.location.reload();
     } catch (err) {
       console.log(err);
     }

@@ -65,6 +65,7 @@ function Nav(props) {
             <span className="numberCircle">{props.countCart}</span>
           </li>
         </ul>
+        {console.log(props.token)}
       </animated.div>
     </react.Fragment>
   );

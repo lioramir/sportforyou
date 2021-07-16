@@ -11,7 +11,7 @@ function Sidebar(props) {
   useEffect(() => {
     try {
       const sendRequest = async () => {
-        const response = await fetch("http://localhost:5000/");
+        const response = await fetch(process.env.REACT_APP_BACKEND_URL);
 
         const responseData = await response.json();
         setCategoryItem(responseData.uniquecategorys.map((m) => ({ name: m })));
